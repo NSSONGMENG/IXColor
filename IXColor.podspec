@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "IXColor"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "App支持主题更换组件"
 
   s.description  = "wightmeng@gmail.com"
