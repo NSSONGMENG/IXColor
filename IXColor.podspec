@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "IXColor"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "App支持主题更换组件"
 
   s.description  = "wightmeng@gmail.com"
@@ -28,10 +28,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/NSSONGMENG/IXColor.git", :tag => "#{s.version}" }
 
 
-  s.source_files  = "IXColor", "IXColor/IXColor/**/*.{h,m}"
-  s.exclude_files = "IXColor/IXColor"
+  s.source_files  = "IXColor","IXColor/**/*.{h,m}"
+  # s.exclude_files = "IXColor"
 
-  # s.public_header_files = "Classes/**/*.h"
+  s.public_header_files = "IXColor/*.h"
 
 
 
