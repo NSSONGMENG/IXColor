@@ -24,9 +24,9 @@ UITableViewDataSource
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Home";
-    self.view.backgroundColorPicker = IXColorPickerWithRGB(kHexWhite,kHexBlack);
+    self.view.backgroundColorPicker = IXColorPickerWithRGB(0xe2e2e2,0x1d1d1d);
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColorPicker = IXColorPickerWithRGB(kHexWhite,kHexBlack);
+    self.navigationController.navigationBar.barTintColorPicker = IXColorPickerWithRGB(0xe2e2e2,0x1d1d1d);
     
     
     [self.view addSubview:self.tableV];
@@ -59,7 +59,7 @@ UITableViewDataSource
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     UIView  * v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 30)];
-    v.backgroundColorPicker = IXColorPickerWithRGB(kHexWhite,kHexBlack);
+    v.backgroundColorPicker = IXColorPickerWithRGB(0xe2e2e2,0x1d1d1d);
     return v;
 }
 
@@ -90,8 +90,8 @@ UITableViewDataSource
 {
     if (!_tableV) {
         _tableV = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tableV.separatorColorPicker = IXColorPickerWithRGB(kHexGray_line,kWhite);
-        _tableV.backgroundColorPicker = IXColorPickerWithRGB(kHexWhite,kHexBlack);
+        _tableV.separatorColorPicker = IXColorPickerWithRGB(0x323232,0xe2e2e2);
+        _tableV.backgroundColorPicker = IXColorPickerWithRGB(0xe2e2e2,0x1d1d1d);
         _tableV.delegate = self;
         _tableV.dataSource = self;
         _tableV.tableFooterView = [UIView new];
