@@ -27,7 +27,7 @@
     [super viewDidLoad];
     
     self.title = _titleStr;
-    self.view.backgroundColorPicker = IXColorPickerWithRGB(kHexWhite,kHexBlack);
+    self.view.backgroundColorPicker = IXColorPickerWithRGB(0xe2e2e2,0x1d1d1d);
     
     
     [self createSubview];
@@ -63,7 +63,7 @@
 {
     if (!_sw) {
         _sw = [[UISwitch alloc] initWithFrame:CGRectMake(25, 10, 100, 40)];
-        _sw.tintColor = kGray_text;
+        _sw.tintColor = [UIColor lightGrayColor];
         [_sw addTarget:self action:@selector(swAction:) forControlEvents:UIControlEventValueChanged];
         [_sw setOn:[[IXColorMgr defaultMgr].curVersion isEqualToString:@"black"]];
     }
@@ -74,7 +74,7 @@
 {
     if (!_swLab) {
         _swLab = [[UILabel alloc] initWithFrame:CGRectMake(100, 15, 150, 20)];
-        _swLab.textColorPicker = IXColorPickerWithRGB(kHexBlack,kHexWhite);
+        _swLab.textColorPicker = IXColorPickerWithRGB(0x1d1d1d,0xe2e2e2);
     }
     return _swLab;
 }
@@ -83,7 +83,7 @@
 {
     if (!_demoLab) {
         _demoLab = [[UILabel alloc] initWithFrame:CGRectMake(25, 80, 150, 30)];
-        _demoLab.textColorPicker = IXColorPickerWithRGB(kHexBlack,kHexWhite);
+        _demoLab.textColorPicker = IXColorPickerWithRGB(0x1d1d1d,0xe2e2e2);
         _demoLab.text = @"Demo";
     }
     return _demoLab;
@@ -93,8 +93,8 @@
 {
     if (!_switchBtn) {
         _switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(25, 130, 100, 40)];
-        _switchBtn.onTintColorPicker = IXColorPickerWithRGB(kHexYello,kHexOrange);
-        _switchBtn.tintColorPicker = IXColorPickerWithRGB(kHexRed,kHexGreen);
+        _switchBtn.onTintColorPicker = IXColorPickerWithRGB(0xffe400,0xffac32);
+        _switchBtn.tintColorPicker = IXColorPickerWithRGB(0xe64a4a,0x28ac8e);
     }
     return _switchBtn;
 }
@@ -105,8 +105,8 @@
         _btn = [[UIButton alloc] initWithFrame:CGRectMake(25, 190, 150, 40)];
         _btn.layer.cornerRadius = 3.f;
         [_btn setTitle:@"UIButtin" forState:UIControlStateNormal];
-        [_btn setTitleColorPicker:IXColorPickerWithRGB(kHexBlack,kHexWhite) forState:UIControlStateNormal];
-        [_btn setBackgroundColorPicker:IXColorPickerWithRGB(kHexRed,kHexGreen)];
+        [_btn setTitleColorPicker:IXColorPickerWithRGB(0x1d1d1d,0xe2e2e2) forState:UIControlStateNormal];
+        [_btn setBackgroundColorPicker:IXColorPickerWithRGB(0xe64a4a,0x28ac8e)];
     }
     return _btn;
 }
@@ -117,9 +117,9 @@
         _slider = [[UISlider alloc] initWithFrame:CGRectMake(25, 250, kScreenWidth - 50, 20)];
         _slider.minimumValue = 0.f;
         _slider.maximumValue = 100.f;
-        _slider.minimumTrackTintColorPicker = IXColorPickerWithRGB(kHexGray_text,kHexWhite);
-        _slider.maximumTrackTintColorPicker = IXColorPickerWithRGB(kHexRed,kHexGreen);
-        _slider.thumbTintColorPicker = IXColorPickerWithRGB(kHexYello,kHexRed);
+        _slider.minimumTrackTintColorPicker = IXColorPickerWithRGB(0x808080,0xe2e2e2);
+        _slider.maximumTrackTintColorPicker = IXColorPickerWithRGB(0xe64a4a,0x28ac8e);
+        _slider.thumbTintColorPicker = IXColorPickerWithRGB(0xffe400,0xe64a4a);
     }
     return _slider;
 }
