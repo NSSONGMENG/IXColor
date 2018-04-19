@@ -2,8 +2,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "IXColor"
-  s.version      = "0.0.5"
-  s.summary      = "App主题颜色图片更换框架"
+  s.version      = "0.0.6"
+  s.summary      = "App颜色图片动态更换框架"
   s.description  = "wightmeng@gmail.com"
   s.homepage     = "https://github.com/NSSONGMENG/IXColor"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -17,5 +17,23 @@ Pod::Spec.new do |s|
 # s.public_header_files = "IXColor/*.h"
 
   s.requires_arc = true
+
+s.subspec 'Core' do |sub|
+    sub.source_files = "IXColor/Core/*.{h,m}"
+    sub.public_header_files = "IXColor/Core/*.h"
+    sub.dependency 'IXColor'
+end
+
+s.subspec 'UIKit' do |sub|
+    sub.source_files = "IXColor/UIKit/*.{h,m}"
+    sub.public_header_files = "IXColor/UIKit/*.h"
+    sub.dependency 'IXColor'
+end
+
+s.subspec 'Quartz' do |sub|
+    sub.source_files = "IXColor/Quartz/*.{h,m}"
+    sub.public_header_files = "IXColor/Quartz/*.h"
+    sub.dependency 'IXColor'
+end
 
 end

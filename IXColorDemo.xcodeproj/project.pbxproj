@@ -18,7 +18,6 @@
 		1430AF4B208878340012BBC7 /* IXHookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430AF11208878340012BBC7 /* IXHookUtility.m */; };
 		1430AF4C208878340012BBC7 /* IXImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430AF13208878340012BBC7 /* IXImage.m */; };
 		1430AF4D208878340012BBC7 /* NSObject+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430AF15208878340012BBC7 /* NSObject+Color.m */; };
-		1430AF4E208878340012BBC7 /* IXColorMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430AF18208878340012BBC7 /* IXColorMgr.m */; };
 		1430AF4F208878340012BBC7 /* CAGradientLayer+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430AF1B208878340012BBC7 /* CAGradientLayer+Color.m */; };
 		1430AF50208878340012BBC7 /* CALayer+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430AF1D208878340012BBC7 /* CALayer+Color.m */; };
 		1430AF51208878340012BBC7 /* CAShapeLayer+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430AF1F208878340012BBC7 /* CAShapeLayer+Color.m */; };
@@ -47,6 +46,7 @@
 		1430AF702088786B0012BBC7 /* m_c_usd_sl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1430AF6A2088786B0012BBC7 /* m_c_usd_sl@2x.png */; };
 		1430AF712088786B0012BBC7 /* m_c_usd_sl@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1430AF6B2088786B0012BBC7 /* m_c_usd_sl@3x.png */; };
 		1430AF722088786B0012BBC7 /* NextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430AF6D2088786B0012BBC7 /* NextVC.m */; };
+		1430AF752088971C0012BBC7 /* IXColorMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 1430AF742088971C0012BBC7 /* IXColorMgr.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,8 +71,6 @@
 		1430AF14208878340012BBC7 /* NSObject+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Color.h"; sourceTree = "<group>"; };
 		1430AF15208878340012BBC7 /* NSObject+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Color.m"; sourceTree = "<group>"; };
 		1430AF16208878340012BBC7 /* IXColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXColorHeader.h; sourceTree = "<group>"; };
-		1430AF17208878340012BBC7 /* IXColorMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXColorMgr.h; sourceTree = "<group>"; };
-		1430AF18208878340012BBC7 /* IXColorMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXColorMgr.m; sourceTree = "<group>"; };
 		1430AF1A208878340012BBC7 /* CAGradientLayer+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+Color.h"; sourceTree = "<group>"; };
 		1430AF1B208878340012BBC7 /* CAGradientLayer+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+Color.m"; sourceTree = "<group>"; };
 		1430AF1C208878340012BBC7 /* CALayer+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Color.h"; sourceTree = "<group>"; };
@@ -126,6 +124,8 @@
 		1430AF6B2088786B0012BBC7 /* m_c_usd_sl@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m_c_usd_sl@3x.png"; sourceTree = "<group>"; };
 		1430AF6C2088786B0012BBC7 /* NextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextVC.h; sourceTree = "<group>"; };
 		1430AF6D2088786B0012BBC7 /* NextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextVC.m; sourceTree = "<group>"; };
+		1430AF732088971B0012BBC7 /* IXColorMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXColorMgr.h; sourceTree = "<group>"; };
+		1430AF742088971C0012BBC7 /* IXColorMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXColorMgr.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,10 +179,8 @@
 		1430AF0A208878340012BBC7 /* IXColor */ = {
 			isa = PBXGroup;
 			children = (
-				1430AF0B208878340012BBC7 /* Core */,
 				1430AF16208878340012BBC7 /* IXColorHeader.h */,
-				1430AF17208878340012BBC7 /* IXColorMgr.h */,
-				1430AF18208878340012BBC7 /* IXColorMgr.m */,
+				1430AF0B208878340012BBC7 /* Core */,
 				1430AF19208878340012BBC7 /* Quartz */,
 				1430AF22208878340012BBC7 /* UIKit */,
 			);
@@ -192,16 +190,18 @@
 		1430AF0B208878340012BBC7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1430AF732088971B0012BBC7 /* IXColorMgr.h */,
+				1430AF742088971C0012BBC7 /* IXColorMgr.m */,
 				1430AF0C208878340012BBC7 /* IXColor.h */,
 				1430AF0D208878340012BBC7 /* IXColor.m */,
-				1430AF0E208878340012BBC7 /* IXDeallocBlockExecutor.h */,
-				1430AF0F208878340012BBC7 /* IXDeallocBlockExecutor.m */,
 				1430AF10208878340012BBC7 /* IXHookUtility.h */,
 				1430AF11208878340012BBC7 /* IXHookUtility.m */,
 				1430AF12208878340012BBC7 /* IXImage.h */,
 				1430AF13208878340012BBC7 /* IXImage.m */,
 				1430AF14208878340012BBC7 /* NSObject+Color.h */,
 				1430AF15208878340012BBC7 /* NSObject+Color.m */,
+				1430AF0E208878340012BBC7 /* IXDeallocBlockExecutor.h */,
+				1430AF0F208878340012BBC7 /* IXDeallocBlockExecutor.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -360,6 +360,7 @@
 				1430AF5F208878340012BBC7 /* UITabBar+Color.m in Sources */,
 				1430AF53208878340012BBC7 /* UIBarItem+Color.m in Sources */,
 				1430AF55208878340012BBC7 /* UIControl+Color.m in Sources */,
+				1430AF752088971C0012BBC7 /* IXColorMgr.m in Sources */,
 				1430AF4B208878340012BBC7 /* IXHookUtility.m in Sources */,
 				1430AF58208878340012BBC7 /* UINavigationBar+Color.m in Sources */,
 				1430AF50208878340012BBC7 /* CALayer+Color.m in Sources */,
@@ -371,7 +372,6 @@
 				1430AF51208878340012BBC7 /* CAShapeLayer+Color.m in Sources */,
 				1430AF59208878340012BBC7 /* UIPageControl+Color.m in Sources */,
 				1430AF722088786B0012BBC7 /* NextVC.m in Sources */,
-				1430AF4E208878340012BBC7 /* IXColorMgr.m in Sources */,
 				1430AF4D208878340012BBC7 /* NSObject+Color.m in Sources */,
 				1430AF60208878340012BBC7 /* UITabBarItem+Color.m in Sources */,
 				1430AF5A208878340012BBC7 /* UIProgressView+Color.m in Sources */,
