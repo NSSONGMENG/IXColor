@@ -2,8 +2,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "IXColor"
-  s.version      = "0.0.4"
-  s.summary      = "App支持主题更换组件"
+  s.version      = "0.0.5"
+  s.summary      = "App主题颜色图片更换框架"
 
   s.description  = "wightmeng@gmail.com"
 
@@ -20,21 +20,27 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/NSSONGMENG/IXColor.git", :tag => "#{s.version}" }
 
-  s.source_files  = "IXColor/IXColor/IXColorHeader.h","IXColor/IXColor/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "IXColor/IXColor/IXColorHeader.h","IXColor/IXColor/IXColorMgr.{h,m}","IXColor/IXColor/**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "IXColor/IXColor/IXColorHeader.h"
+  s.public_header_files = "IXColor/IXColor/*.h"
  
   s.subspec 'Core' do |sub|
 	sub.source_files = "IXColor/IXColor/Core/*.{h,m}"
+	sub.public_header_files = "IXColor/IXColor/Core/*.h" 
+	sub.dependency 'IXColor/IXColor'
   end
 	
   s.subspec 'UIKit' do |sub|
 	sub.source_files = "IXColor/IXColor/UIKit/*.{h,m}"
+	sub.public_header_files = "IXColor/IXColor/UIKit/*.h"
+	sub.dependency 'IXColor/IXColor'
   end
 
   s.subspec 'Quartz' do |sub|
         sub.source_files = "IXColor/IXColor/Quartz/*.{h,m}"
+	sub.public_header_files = "IXColor/IXColor/Quartz/*.h"
+	sub.dependency 'IXColor/IXColor'
   end
 
 
