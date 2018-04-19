@@ -1,8 +1,8 @@
 //
 //  main.m
-//  IXColor
+//  IXColorDemo
 //
-//  Created by Seven on 2018/4/3.
+//  Created by Seven on 2018/4/19.
 //  Copyright © 2018年 Seven. All rights reserved.
 //
 
