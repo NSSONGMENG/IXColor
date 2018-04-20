@@ -9,6 +9,7 @@
 #import "NextVC.h"
 
 @interface NextVC ()
+@property (nonatomic, strong) UILabel   * titleLab;
 @property (nonatomic, strong) UISwitch  * sw;
 @property (nonatomic, strong) UILabel   * swLab;
 @property (nonatomic, strong) UILabel   * demoLab;
@@ -26,9 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = _titleStr;
+    self.titleLab.text = _titleStr;
     self.view.backgroundColorPicker = IXColorPickerWithRGB(0xe2e2e2,0x1d1d1d);
-    
     
     [self createSubview];
 }
@@ -59,6 +59,17 @@
 #pragma mark -
 #pragma mark - getter
 
+- (UILabel *)titleLab
+{
+    if (!_titleLab) {
+        _titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+        _titleLab.textAlignment = NSTextAlignmentCenter;
+        _titleLab.textColorPicker = IXColorPickerWithRGB(0x1d1d1d,0xe2e2e2);
+        self.navigationItem.titleView = _titleLab;
+    }
+    return _titleLab;
+}
+
 - (UISwitch *)sw
 {
     if (!_sw) {
@@ -75,6 +86,7 @@
     if (!_swLab) {
         _swLab = [[UILabel alloc] initWithFrame:CGRectMake(100, 15, 150, 20)];
         _swLab.textColorPicker = IXColorPickerWithRGB(0x1d1d1d,0xe2e2e2);
+        [_swLab setText:[[IXColorMgr defaultMgr].curVersion isEqualToString:@"black"] ? @"black version" : @"white version"];
     }
     return _swLab;
 }

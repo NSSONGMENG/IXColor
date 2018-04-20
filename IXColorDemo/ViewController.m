@@ -23,11 +23,15 @@ UITableViewDataSource
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Home";
     self.view.backgroundColorPicker = IXColorPickerWithRGB(0xe2e2e2,0x1d1d1d);
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColorPicker = IXColorPickerWithRGB(0xe2e2e2,0x1d1d1d);
     
+    UILabel * titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    titleLab.textAlignment = NSTextAlignmentCenter;
+    titleLab.textColorPicker = IXColorPickerWithRGB(0x1d1d1d,0xe2e2e2);
+    titleLab.text = @"Home";
+    self.navigationItem.titleView = titleLab;
     
     [self.view addSubview:self.tableV];
 }
