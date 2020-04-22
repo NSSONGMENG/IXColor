@@ -40,4 +40,33 @@ IXImagePicker IXImagePickerWithImages(UIImage * normal, ...) {
     return nil;
 }
 
+IXImagePicker IXImagePickerWithImageNames(NSString * normal, ...) {
+    NSArray * versions = [IXColorMgr defaultMgr].versions;
+    NSMutableArray  * imgNames = [@[] mutableCopy];
+    [imgNames addObject:normal];
+    NSUInteger num_args = versions.count - 1;
+    
+    va_list imageNames;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wvarargs"
+    va_start(imageNames, num_args);
+#pragma clang diagnostic pop
+    for (NSUInteger i = 0; i < num_args; i++) {
+        NSString * img = va_arg(imageNames, NSString *);
+        [imgNames addObject:img];
+    }
+    va_end(imageNames);
+    
+    return ^(NSString *version){
+        NSUInteger    idx = [[IXColorMgr defaultMgr].versions indexOfObject:[IXColorMgr defaultMgr].curVersion];
+        
+        if (idx < [IXColorMgr defaultMgr].versions.count) {
+            return [UIImage imageNamed:imgNames[idx]];
+        }
+        return [UIImage imageNamed:[imgNames lastObject]];
+    };
+    
+    return nil;
+}
+
 @end

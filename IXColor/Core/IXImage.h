@@ -10,6 +10,7 @@
 
 typedef UIImage *(^IXImagePicker)(NSString * version);
 IXImagePicker   IXImagePickerWithImages(UIImage * normal, ...);
+IXImagePicker   IXImagePickerWithImageNames(NSString * normal, ...);
 
 @interface IXImage : NSObject
 

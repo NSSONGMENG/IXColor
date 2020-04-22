@@ -141,9 +141,10 @@
 {
     if (!_imageV) {
         _imageV = [[UIImageView alloc] initWithFrame:CGRectMake(25, 290, 97, 84)];
-        UIImage * img1 = [UIImage imageNamed:@"m_c_usd"];
-        UIImage * img2 = [UIImage imageNamed:@"m_c_usd_sl"];
-        _imageV.imagePicker = IXImagePickerWithImages(img1,img2);
+//        UIImage * img1 = [UIImage imageNamed:@"m_c_usd"];
+//        UIImage * img2 = [UIImage imageNamed:@"m_c_usd_sl"];
+//        _imageV.imagePicker = IXImagePickerWithImages(img1,img2);
+        _imageV.imagePicker = IXImagePickerWithImageNames(@"m_c_usd", @"m_c_usd_sl");
     }
     return _imageV;
 }
